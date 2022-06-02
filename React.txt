@@ -117,5 +117,5 @@ Internal Css:
 make a folder of style in src add a file of css in it import it in index.js
 Then when u will inspect the webpage it will be like
 <style>
-all ur styling will 
+all ur styling will be in there
 </style>
