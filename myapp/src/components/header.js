@@ -1,5 +1,5 @@
 import React from "react";
-import Check,{Check1} from "./news_list";
+import Check, { Check1,ClassComp } from "./news_list";
 function ShowHeader()
 {
     function CalculateDate()
@@ -11,8 +11,9 @@ function ShowHeader()
         <>
         <h1>Header</h1>
         <h2>Date is {CalculateDate()}</h2>
-        <h3><Check/></h3>
-        <h4><Check1/></h4>
+        <Check/>
+        <Check1/>
+        <ClassComp/>
         </>
     )
 }
