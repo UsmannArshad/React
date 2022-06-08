@@ -22,3 +22,19 @@ if we empty our index.js then blank screen will appear.
 
 import React from 'react'; >Every time u build u have to include this
 import ReactDOM from 'react-dom'; >to connect out index.js and index.html file (How to read DOM and cnnect with index.html)
+Component:Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+
+Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.
+ReactDOM.render(app,document.getElementById('root')) if u pass like this it will think that app is functions
+and will give an error so we have to write <app/> now it will think it as a component.
+// Before
+import { render } from 'react-dom';
+const container = document.getElementById('app');
+render(<App tab="home" />, container);
+
+// After
+import { createRoot } from 'react-dom/client';
+const container = document.getElementById('app');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App tab="home" />);
+before one working but throwing error as it is not suported in react18
