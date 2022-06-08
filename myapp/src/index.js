@@ -9,7 +9,14 @@ function App()
         </div>
     )
 }
-//ReactDOM.render(<App/>,document.getElementById('root'))
+function App2()
+{
+    return(
+        React.createElement('div',{className:'imclass'},React.createElement('h1',{},'Hello World'))
+    )
+}
+//ReactDOM.render(<App/>,document.getElementById('root'))  //not suported inr react18
 const container = document.getElementById('root');
-const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<App tab="home" />);
+const root = createRoot(container);
+//root.render(<App tab="home" />); by returning in form of html
+root.render(<App2/>)
