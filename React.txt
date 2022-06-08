@@ -1,11 +1,24 @@
-React:
+=>REACT:
+
 npx create-react-app myapp=>for creating new react app with name myapp
 npm start=>in my app use for starting the development server(like liveserver)
 
-Bundle:
-u shouldnt send all js files to server when u put website on production.use command to will create a bundle
+=>BUNDLE:
+
+u shouldnt send all js files to server when u put website on production.use command to will create a
+bundle
 All our js files=>transpile=>index.html and bundle.js
+Transpiling is a specific term for taking source code written in one language and transforming into
+another language that has a similar level of abstraction.
 
-Transpiling is a specific term for taking source code written in one language and transforming into another language that has a similar level of abstraction.
+=>BUILDING REACT APP FROM SCRATCH
 
-Now delete all files in src and we ll build react app froms scratch
+Now delete all files in src and we ll build react app froms scratch:
+First thing index.js is required for the npm start.All our logic is in index.js.
+We have index.html file in public folder that contains html and logic is in index.js
+if we empty our index.js then blank screen will appear.
+
+=>WHATS INSIDE IN INDEX.JS?
+
+import React from 'react'; >Every time u build u have to include this
+import ReactDOM from 'react-dom'; >to connect out index.js and index.html file (How to read DOM and cnnect with index.html)
