@@ -80,4 +80,13 @@ Named:
 export {App}
 import {App} from ./component/file.js
 Combination:
-import App,{App2} from ...........
+import App,{App2,App3} from ...........
+where App2,3 can be class or function component 
+
+=>Class based Component
+
+ must extend Component from React then override its render function with your return 
+statement.all other same as function components i.e export and import
+
+=>Styling
+
