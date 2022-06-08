@@ -63,3 +63,21 @@ now our div will only contain h1 and h2 no extra div as there was in case of
 <h1></h1>
 <h2></h2>
 </div>
+
+=>Working with Components:
+
+Make js file make a function or class and export it 
+import it where u want to use it.
+
+=>DEFAULT EXPORT VS NAMED EXPORT:
+
+default export is allowed once per file but if we have multiple funcs or classes then we can use
+named export.Functionality is same but syntax is different.
+Default: 
+export default App
+import App from ./components/file.js
+Named:
+export {App}
+import {App} from ./component/file.js
+Combination:
+import App,{App2} from ...........
