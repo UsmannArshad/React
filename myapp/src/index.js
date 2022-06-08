@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import {createRoot} from 'react-dom/client'
+import ShowHeader from './components/header';
 function App()
 {
     return(
@@ -15,9 +16,15 @@ const App2=()=>   //same as app
 )
 const App3=()=>   //same as app
 (        
-    <>
+    <>                     //or React.Fragment in tags
         <h1>Hello World</h1>
         <h2>Hello Pakistan</h2>
+    </>
+)
+const App4=()=>
+(
+    <>
+    <ShowHeader/>
     </>
 )
 //ReactDOM.render(<App/>,document.getElementById('root'))  //not suported inr react18
@@ -25,4 +32,5 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 //root.render(<App tab="home" />); by returning in form of html
 //root.render(<App2/>)
-root.render(<App3/>)
+//root.render(<App3/>)
+root.render(<App4/>)
