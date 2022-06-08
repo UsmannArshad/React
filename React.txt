@@ -44,3 +44,22 @@ to be rendered.
 =>Behind the scenes:
 As we know in component when we return something it is .jsx not html so how it is rendered??
 it is shown in code that we return it in html format react convert it into .jsx
+We cant return more than 1 statement in components like:
+<h1></h1>
+<h2></h2>
+Solution?
+Use React.Fragment tags
+<React.Fragment>
+<h1></h1>
+<h2></h2>
+</React.Fragment>
+or shortly:
+<>             
+<h1>Hello World</h1>
+<h2>Hello Pakistan</h2>
+</>
+now our div will only contain h1 and h2 no extra div as there was in case of
+<div>
+<h1></h1>
+<h2></h2>
+</div>
