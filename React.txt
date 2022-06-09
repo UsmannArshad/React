@@ -102,3 +102,13 @@ let styles={
 }
 and use styles.header in style tag of html etc
 
+Outer Css:
+make a .css file in public folder add styling include it in html  and add classname same as of
+in sylesheet where u want to apply that styling.
+In CSS:
+.dateheading{
+    color:blueviolet;
+    font-size: larger;
+}
+In js:
+ <h2 className="dateheading">Date is {CalculateDate()}</h2>

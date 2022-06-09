@@ -10,7 +10,7 @@ function ShowHeader()
     return(
         <>
         <h1>Header</h1>
-        <h2>Date is {CalculateDate()}</h2>
+        <h2 className="dateheading">Date is {CalculateDate()}</h2>
         <Check/>
         <Check1/>
         <ClassComp/>
