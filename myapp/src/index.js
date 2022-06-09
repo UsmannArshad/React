@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import {createRoot} from 'react-dom/client'
 import ShowHeader from './components/header';
+import './style/style.css'
 function App()
 {
     return(

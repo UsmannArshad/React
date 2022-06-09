@@ -9,7 +9,7 @@ function ShowHeader()
     }
     return(
         <>
-        <h1>Header</h1>
+        <h1 className="headerheading">Header</h1>
         <h2 className="dateheading">Date is {CalculateDate()}</h2>
         <Check/>
         <Check1/>

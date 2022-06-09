@@ -90,7 +90,7 @@ statement.all other same as function components i.e export and import
 
 =>Styling:
 
-Inline or Internal CSS:
+Inline:
 let styles={
     header:{
         color:"brown"
@@ -112,3 +112,10 @@ In CSS:
 }
 In js:
  <h2 className="dateheading">Date is {CalculateDate()}</h2>
+
+Internal Css:
+make a folder of style in src add a file of css in it import it in index.js
+Then when u will inspect the webpage it will be like
+<style>
+all ur styling will 
+</style>
