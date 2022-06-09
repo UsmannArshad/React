@@ -90,3 +90,15 @@ statement.all other same as function components i.e export and import
 
 =>Styling:
 
+Inline or Internal CSS:
+let styles={
+    header:{
+        color:"brown"
+    },
+    paragraph:{
+        color:"yellow"
+
+    }
+}
+and use styles.header in style tag of html etc
+

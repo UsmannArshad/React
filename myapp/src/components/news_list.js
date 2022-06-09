@@ -3,13 +3,23 @@ function Check()
 {
     return (<h1>Check</h1>)
 }
-const Check1=()=>(<h1>Check1</h1>)
+const Check1=()=>(<h1 style={styles.header}>Check1</h1>)
 class ClassComp extends React.Component{
     render()
     {
         return (
-            <p>from Class Component</p>
+            <p style={styles.paragraph}>from Class Component</p>
         )
+    }
+
+}
+let styles={
+    header:{
+        color:"brown"
+    },
+    paragraph:{
+        color:"yellow"
+
     }
 
 }
