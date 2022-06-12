@@ -178,7 +178,7 @@ in onchange for example:
     we r printing {this.state.keyword} in render and we can see it render after every change 
 
     Another use can be a counter this.setstate({count:this.state.count+1})
-    or:
+    or u can use:
         this.setState((state,props)=>({
         count:state.count + 1               //state will give the previous state and it is returning                                                 //returning new state with changed values and previous                                                /ones
         }))                                 //the new state with changed and previous values
