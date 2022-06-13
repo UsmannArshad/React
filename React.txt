@@ -176,3 +176,5 @@ in onchange for example:
     Its because set state is built in function that not only update the changed value
     but also re-render it for confirming
     we r printing {this.state.keyword} in render and we can see it render after every change 
+
+    Another use can be a counter this.setstate({count:this.state.count+1})

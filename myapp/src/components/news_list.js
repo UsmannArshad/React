@@ -10,8 +10,15 @@ class ClassComp extends React.Component{
     {
         console.log("Hello")
     }
+    increment(event)
+    {
+        this.setState({
+            count:this.state.count+1
+        })
+    }
     state={
-        keyword:'name'
+        keyword:'name',
+        count:0
     }
     inputChangeHandler(event,name)
     {
@@ -29,6 +36,8 @@ class ClassComp extends React.Component{
             <p style={styles.paragraph}>from Class Component</p>
             <input onChange={(e)=>this.inputChangeHandler(e,'usman')}></input>
             <p>{this.state.keyword}</p>
+            <div>{this.state.count}</div>
+            <button onClick={(e)=>this.increment(e)}>Increment</button>
             </>
         )
     }
