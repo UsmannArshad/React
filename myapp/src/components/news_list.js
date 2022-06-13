@@ -12,9 +12,12 @@ class ClassComp extends React.Component{
     }
     increment(event)
     {
-        this.setState({
-            count:this.state.count+1
-        })
+        // this.setState({
+        //     count:this.state.count+1         //Method 1
+        // })
+        this.setState((state,props)=>({
+            count:state.count + 1               //state will give the previous state and it is                                                 //returning new state with changed values and previous                                                /ones
+        }))                                     //retuning new state with changed and previous values
     }
     state={
         keyword:'name',
@@ -31,6 +34,7 @@ class ClassComp extends React.Component{
     }
     render()
     {
+        console.log(this.state)
         return (
             <>
             <p style={styles.paragraph}>from Class Component</p>
