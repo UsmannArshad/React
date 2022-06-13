@@ -120,7 +120,23 @@ Then when u will inspect the webpage it will be like
 all ur styling will be in there
 </style>
 
-Events:
+=>Events:
+
 There are many events u can use which u can find on react docs.
 example onClick
 onChange event can be used when we change something like in input type when we type or delete something
+<input onChange={this.funcname}/>
+funcname()
+{
+    console.log('gg')
+}
+What if we want to get value in the input:
+funcname(event)
+{
+    console.log(event.target.value)   =>event is the synthetic event containing different values
+    and the value user type will be in target and then value
+}
+
+Difference bw this.funcname and this.funcname()?
+first one will not be executed until any change is done.like its a while loop
+while the 2nd one will be execute one time and then will fired at any change its like do while  

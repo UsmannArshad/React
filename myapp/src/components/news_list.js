@@ -5,9 +5,9 @@ function Check()
 }
 const Check1=()=>(<h1 style={styles.header}>Check1</h1>)
 class ClassComp extends React.Component{
-    inputChangeHandler()
+    inputChangeHandler(event)
     {
-        console.log("i was changed")
+        console.log(event.target.value)
     }
     render()
     {
