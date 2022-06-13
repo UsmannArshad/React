@@ -5,10 +5,17 @@ function Check()
 }
 const Check1=()=>(<h1 style={styles.header}>Check1</h1>)
 class ClassComp extends React.Component{
+    inputChangeHandler()
+    {
+        console.log("i was changed")
+    }
     render()
     {
         return (
+            <>
             <p style={styles.paragraph}>from Class Component</p>
+            <input onChange={this.inputChangeHandler}></input>
+            </>
         )
     }
 

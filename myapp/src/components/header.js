@@ -9,7 +9,7 @@ function ShowHeader()
     }
     return(
         <>
-        <h1 className="headerheading">Header</h1>
+        <h1 className="headerheading" onClick={()=>console.log('i was clicked')}>Header</h1>
         <h2 className="dateheading">Date is {CalculateDate()}</h2>
         <Check/>
         <Check1/>

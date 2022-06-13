@@ -119,3 +119,8 @@ Then when u will inspect the webpage it will be like
 <style>
 all ur styling will be in there
 </style>
+
+Events:
+There are many events u can use which u can find on react docs.
+example onClick
+onChange event can be used when we change something like in input type when we type or delete something
