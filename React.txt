@@ -139,4 +139,40 @@ funcname(event)
 
 Difference bw this.funcname and this.funcname()?
 first one will not be executed until any change is done.like its a while loop
-while the 2nd one will be execute one time and then will fired at any change its like do while  
+while the 2nd one will be execute one time and then will fired at any change its like do while
+
+What if we want to send parameters too?
+we can use a callback function in which we will send event as an argument
+onChange={(e)=>this.funcname(e,'ron')}
+where e us event
+
+What if we want to call another function in funcname
+funcname(event)
+{
+    this.hello() =>it will throw an error as it ill consider this inside funcname
+
+}
+so what can we do is to use callback func as stated earlier it will define that we r talking abt class
+not function i.e will give error if we use simple OnClick={this.funcname}
+
+=>State
+
+In class based component u have default state but in func based component u dont have default.
+But u can use hooks
+State is just like an object having tons of properties that can be string,integer etc.It acts as a tiny
+database.
+state{
+    name:'ali'
+}
+in onchange for example:
+    state={
+        keyword:'name'
+    }
+    this.setState({
+        keyword:event.target.value
+    })
+    Why we would not simply write this.state.keyword=event.target.value?
+    Why we r using this.setstate?
+    Its because set state is built in function that not only update the changed value
+    but also re-render it for confirming
+    we r printing {this.state.keyword} in render and we can see it render after every change 

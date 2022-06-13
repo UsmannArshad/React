@@ -1,3 +1,4 @@
+
 import React from "react";
 function Check()
 {
@@ -5,16 +6,29 @@ function Check()
 }
 const Check1=()=>(<h1 style={styles.header}>Check1</h1>)
 class ClassComp extends React.Component{
-    inputChangeHandler(event)
+    hello()
+    {
+        console.log("Hello")
+    }
+    state={
+        keyword:'name'
+    }
+    inputChangeHandler(event,name)
     {
         console.log(event.target.value)
+        //console.log(name)
+        //this.hello()
+        this.setState({
+            keyword:event.target.value
+        })
     }
     render()
     {
         return (
             <>
             <p style={styles.paragraph}>from Class Component</p>
-            <input onChange={this.inputChangeHandler}></input>
+            <input onChange={(e)=>this.inputChangeHandler(e,'usman')}></input>
+            <p>{this.state.keyword}</p>
             </>
         )
     }
