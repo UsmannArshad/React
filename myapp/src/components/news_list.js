@@ -48,7 +48,7 @@ const ShowNewsbyFunc1=(props)=>{
 const ShowNewsbyFunc=(props)=>{
     return(
         <>
-        <h1>Coming from Function Component</h1>
+        {props.children}
         {props.news.map((item)=>(
         <div key={item.id}>
             <h3>{item.title}</h3>

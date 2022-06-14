@@ -41,7 +41,9 @@ class App4 extends React.Component{
             />
             <ShowNewsbyFunc
             news={this.state.news}     
-            />     
+            >
+            <h1>Props by using function</h1>
+            </ShowNewsbyFunc>     
   
             </>
         )

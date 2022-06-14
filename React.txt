@@ -225,4 +225,6 @@ write {blood_group} instead of props  in functions
 const newlist=(props)=>{} x
 const newlist=({blood_group,color})=>{} OK
 
+=>Children
 
+props.children is used when we want to send some jsx from parent to children
