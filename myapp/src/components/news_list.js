@@ -8,11 +8,17 @@ function Check()
 const Check1=()=>(<h1 style={styles.header}>Check1</h1>)
 class ShowNews extends Component{
     state={
-        check:false
+        check:false,
+        active:false
     }
     btnclick=()=>{
         this.setState({
             check:true
+        })
+    }
+    changecolor=()=>{
+        this.setState({
+            active:!this.state.active
         })
     }
     render()
@@ -21,12 +27,13 @@ class ShowNews extends Component{
             <>
             <h1>Coming from Class Component</h1>
             {this.props.news.map((item)=>(
-            <div key={item.id}>
+            <div key={item.id} style={{background:`${this.state.active ? 'red':'blue'}`}}>
                 <h3>{item.title}</h3>
                 <p>{item.feed}</p>
             </div>
             ))}
             <button onClick={this.btnclick}>Click me</button>
+            <button onClick={this.changecolor}>Change Color</button>
             {this.state.check ? <ShowNewsbyFunc1 news={this.props.news}/>:null}
             </>
         )

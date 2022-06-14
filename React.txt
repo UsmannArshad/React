@@ -228,3 +228,11 @@ const newlist=({blood_group,color})=>{} OK
 =>Children
 
 props.children is used when we want to send some jsx from parent to children
+
+=>Change style with state
+We can use ternary
+bool ? (if true):(if false)
+like:
+string a= 1===1 ? 'good':'bad';
+or style={{background:check ? 'red':'false'}}=>bg color willbe red if check is true and so on
+U can even decide class name at run time
