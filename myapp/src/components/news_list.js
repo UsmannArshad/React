@@ -1,5 +1,6 @@
 
 import React,{Component} from "react";
+import News_list_items from "./news_list_item";
 function Check()
 {
     return (<h1>Check</h1>)
@@ -32,16 +33,15 @@ class ShowNews extends Component{
     }
 }
 const ShowNewsbyFunc1=(props)=>{
-    console.log("very dangerous")
+    
+    const news=props.news.map((item)=>(
+        <News_list_items
+        items={item}/>
+        ))
     return(
         <>
-        <h1>Coming from Function Component</h1>
-        {props.news.map((item)=>(
-        <div key={item.id}>
-        <h3>{item.title}</h3>
-        <p>{item.feed}</p>
-        </div>
-        ))}
+        <h1>Using news list items file</h1>
+        {news}
         </>
     )
 }
