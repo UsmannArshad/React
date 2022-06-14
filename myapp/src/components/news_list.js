@@ -36,7 +36,7 @@ const ShowNewsbyFunc1=(props)=>{
     
     const news=props.news.map((item)=>(
         <News_list_items
-        items={item}/>
+        items={item} key={item.id}/>
         ))
     return(
         <>
