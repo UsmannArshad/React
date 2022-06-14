@@ -211,4 +211,8 @@ for function props will be in the parameter and prop.news will be used
 In case of array use this.prop.news.map((item)=>(
     item.title etc
 )) 
+maybe in future we have a lot of properties like name age etc and we dont wanna use them then we will simply
+write {blood_group} instead of props  in functions
+const newlist=(props)=>{} x
+const newlist=({blood_group,color})=>{} OK
 
