@@ -1,10 +1,63 @@
 
-import React from "react";
+import React,{Component} from "react";
 function Check()
 {
     return (<h1>Check</h1>)
 }
 const Check1=()=>(<h1 style={styles.header}>Check1</h1>)
+class ShowNews extends Component{
+    state={
+        check:false
+    }
+    btnclick=()=>{
+        this.setState({
+            check:true
+        })
+    }
+    render()
+    {
+        return(
+            <>
+            <h1>Coming from Class Component</h1>
+            {this.props.news.map((item)=>(
+            <div key={item.id}>
+                <h3>{item.title}</h3>
+                <p>{item.feed}</p>
+            </div>
+            ))}
+            <button onClick={this.btnclick}>Click me</button>
+            {this.state.check ? <ShowNewsbyFunc1 news={this.props.news}/>:null}
+            </>
+        )
+    }
+}
+const ShowNewsbyFunc1=(props)=>{
+    console.log("very dangerous")
+    return(
+        <>
+        <h1>Coming from Function Component</h1>
+        {props.news.map((item)=>(
+        <div key={item.id}>
+        <h3>{item.title}</h3>
+        <p>{item.feed}</p>
+        </div>
+        ))}
+        </>
+    )
+}
+const ShowNewsbyFunc=(props)=>{
+    return(
+        <>
+        <h1>Coming from Function Component</h1>
+        {props.news.map((item)=>(
+        <div key={item.id}>
+            <h3>{item.title}</h3>
+            <p>{item.feed}</p>
+        </div>
+        ))}
+        </>
+    )
+}
 class ClassComp extends React.Component{
     hello()
     {
@@ -60,3 +113,5 @@ let styles={
 export default Check;
 export {Check1};
 export {ClassComp};
+export {ShowNews};
+export{ShowNewsbyFunc}

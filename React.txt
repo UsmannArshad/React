@@ -182,3 +182,33 @@ in onchange for example:
         this.setState((state,props)=>({
         count:state.count + 1               //state will give the previous state and it is returning                                                 //returning new state with changed values and previous                                                /ones
         }))                                 //the new state with changed and previous values
+
+=>props
+
+How to send data to other component?
+Use state and props as in code
+Props is short form of proerties.Props is short for properties. You give properties to components. 
+Just like your parents gave you your eye color your components in React give properties to their children. Everything flows downhill.
+Children components do not give props back to their parents.
+You can use JSON as ur fake db store dictionary type daata into it.
+like
+[
+    {
+        "id":1
+        "title":"Heading"
+        "Feed":"Description"
+    }
+]
+then import in file where u wanna use it
+import JSON from ./data.JSON
+then u can pass this data to children
+where u r rendering it
+like
+<><Children news={JSON}/></>
+and in children if its one item then simply print it
+<div>this.props.news</div>=>if its class
+for function props will be in the parameter and prop.news will be used
+In case of array use this.prop.news.map((item)=>(
+    item.title etc
+)) 
+
