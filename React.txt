@@ -183,6 +183,15 @@ in onchange for example:
         count:state.count + 1               //state will give the previous state and it is returning                                                 //returning new state with changed values and previous                                                /ones
         }))                                 //the new state with changed and previous values
 
+
+    TIP for state
+    state={
+        name:"Usman"
+        age:32
+    }
+    const {name,age}=this.state
+    now we dont need to write this.state.name every time we ll just write {name}
+
 =>props
 
 How to send data to other component?
@@ -215,4 +224,5 @@ maybe in future we have a lot of properties like name age etc and we dont wanna 
 write {blood_group} instead of props  in functions
 const newlist=(props)=>{} x
 const newlist=({blood_group,color})=>{} OK
+
 
