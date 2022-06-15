@@ -236,3 +236,8 @@ like:
 string a= 1===1 ? 'good':'bad';
 or style={{background:check ? 'red':'false'}}=>bg color willbe red if check is true and so on
 U can even decide class name at run time
+
+We can also send function as a property like i did in newsagency react app
+
+---------------------------------------------All done till video 015 react basics------------------------
+From React Docs now we will create clock using React in timer react app
