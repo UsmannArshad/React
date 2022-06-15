@@ -265,3 +265,31 @@ The render() method is required, and is the method that actually outputs the htm
 The componentDidMount() method runs after the component output has been rendered to the DOM
 =>componentWillUnmount:
 componentWillUnmount() is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method.
+
+=>Call back Function:Callback function is passed to another function.It helps to control the sequence of
+function example u want to do some calculation then print the answer and calculation will take some time
+and result will be displayed before calculation then it will cause a problem.
+performcalculation()->this function has set timeout of interval 5sec
+display()->this function has set timeout of 1sec
+now if we call both of these function then first display will be called and calculation will be called
+after 5 s.
+To reoslve that we will pass display as a callback function to calculation
+calculation(callback){
+    //set timeout
+    callback()
+}
+calculation(display)
+=>Now display will be called after 5 second when calculation is done and whole process will take 6 seconds
+It is mostly used in asynchronous methods like this.
+
+=>Diff bw normal function and arrow function?
+Arrow funciton are used for shorthand for functions
+a=(a,b)=>a+b
+The handling of this is also different in arrow functions compared to regular functions.
+
+In short, with arrow functions there are no binding of this.
+
+In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+With arrow functions the this keyword always represents the object that defined the arrow function.
+As in timer example we can see we r excessing this.state.time if we ll not use arrow while calling or defining
+then it will give that time is undefined

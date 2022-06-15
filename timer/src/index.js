@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {createRoot} from 'react-dom/client'
-import {Alert} from 'react'
 const container = document.getElementById('root');
 const root = createRoot(container);
 
@@ -24,7 +23,7 @@ class Clock extends Component{
     }
     componentDidMount()
     {
-        this.timerId=setInterval(()=>this.tick(),1000);
+        this.timerId=setInterval(()=>this.tick(),1000);   //using arrow function while calling
     }
     componentWillUnmount()
     {
@@ -37,11 +36,10 @@ class Clock extends Component{
             time:new Date()
         }))
     }
-    removetimer()
+    removetimer=()=>   //making this func arrow as otherwise it will consider this as a this of function
     {
-        console.log("ff")
         this.setState({
-            check:false
+            check:!this.state.check
         })
     }
     render()
@@ -49,7 +47,7 @@ class Clock extends Component{
         return(
         <div>
         <h1>Hello, world!</h1>
-        <button onClick={()=>this.removetimer()} 
+        <button onClick={this.removetimer} 
         >Delete Timer</button>
         {this.state.check ? <h2>It is {this.state.time.toLocaleTimeString()}.</h2>:null}
         </div> 
