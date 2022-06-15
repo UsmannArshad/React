@@ -292,4 +292,4 @@ In short, with arrow functions there are no binding of this.
 In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
 With arrow functions the this keyword always represents the object that defined the arrow function.
 As in timer example we can see we r excessing this.state.time if we ll not use arrow while calling or defining
-then it will give that time is undefined
+then it will give that time is undefineds
