@@ -241,3 +241,27 @@ We can also send function as a property like i did in newsagency react app
 
 ---------------------------------------------All done till video 015 react basics------------------------
 From React Docs now we will create clock using React in timer react app
+
+Life Cycle:
+Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.
+The three phases are: Mounting, Updating, and Unmounting.
+
+1)Mounting:
+Mounting means putting elements into the DOM.
+
+React has four built-in methods that gets called, in this order, when mounting a component:
+
+constructor()
+getDerivedStateFromProps()
+render()
+componentDidMount()
+componentWillUnmount()
+
+=>Constructor:
+The constructor() method is called before anything else, when the component is initiated, and it is the natural place to set up the initial state and other initial values.
+=>render:
+The render() method is required, and is the method that actually outputs the html to the DOM.
+=>componentDidMount:
+The componentDidMount() method runs after the component output has been rendered to the DOM
+=>componentWillUnmount:
+componentWillUnmount() is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method.
