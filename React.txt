@@ -253,7 +253,7 @@ React has four built-in methods that gets called, in this order, when mounting a
 
 constructor()
 getDerivedStateFromProps()
-render()
+render()                            =>Order is same these func will call in this order
 componentDidMount()
 componentWillUnmount()
 
@@ -293,3 +293,15 @@ In regular functions the this keyword represented the object that called the fun
 With arrow functions the this keyword always represents the object that defined the arrow function.
 As in timer example we can see we r excessing this.state.time if we ll not use arrow while calling or defining
 then it will give that time is undefineds
+
+=>Updating LifeCycle:
+An update can be caused by changes to props or state
+A component can'nt change its own props but can change the props of its children
+1)getDerivedStateFromProps()
+2)shouldComponentUpdate()
+3)render()
+4)getSnapshotBeforeUpdate()
+5)componentDidUpdate()
+1)shouldComponentUpdate=>It returns boolean.It will be called when we want to update something.
+It will be called bw getDerivedStateFromProps and render.If false then it will not call Render.Otherwise
+it will call render.

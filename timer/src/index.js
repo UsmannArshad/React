@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {createRoot} from 'react-dom/client'
+import UpdateComp from './components/updatelifecycle';
 const container = document.getElementById('root');
 const root = createRoot(container);
 
@@ -15,23 +16,29 @@ const root = createRoot(container);
 class Clock extends Component{
     constructor(props)
     {
+        console.log("Constructor")
         super(props)
         this.state={
             check:true,
             time:new Date()
         }
     }
+    static getDerivedStateFromProps()
+    {
+        console.log("getDerivedStateFromProps")
+    }
     componentDidMount()
     {
+        console.log("Component did mount")
         this.timerId=setInterval(()=>this.tick(),1000);   //using arrow function while calling
     }
     componentWillUnmount()
     {
+        console.log("Component will unmount")
         clearInterval(this.timerId)
     }
     tick()
     {
-        console.log("gg")
         this.setState((state)=>({
             time:new Date()
         }))
@@ -44,12 +51,14 @@ class Clock extends Component{
     }
     render()
     {
+        console.log("Render")
         return(
-        <div>
-        <h1>Hello, world!</h1>
+        <div className='mounting_div'>
+        <h1>Mounting Lifecycle</h1>
         <button onClick={this.removetimer} 
         >Delete Timer</button>
         {this.state.check ? <h2>It is {this.state.time.toLocaleTimeString()}.</h2>:null}
+        <UpdateComp/>
         </div> 
         )
     }
