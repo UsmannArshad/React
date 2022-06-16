@@ -26,6 +26,7 @@ class Clock extends Component{
     static getDerivedStateFromProps()
     {
         console.log("getDerivedStateFromProps")
+        return null
     }
     componentDidMount()
     {
@@ -53,13 +54,13 @@ class Clock extends Component{
     {
         console.log("Render")
         return(
-        <div className='mounting_div'>
-        <h1>Mounting Lifecycle</h1>
-        <button onClick={this.removetimer} 
-        >Delete Timer</button>
-        {this.state.check ? <h2>It is {this.state.time.toLocaleTimeString()}.</h2>:null}
+        // <div className='mounting_div'>
+        // <h1>Mounting Lifecycle</h1>
+        // <button onClick={this.removetimer} 
+        // >Delete Timer</button>
+        // {this.state.check ? <h2>It is {this.state.time.toLocaleTimeString()}.</h2>:null}
         <UpdateComp/>
-        </div> 
+        // </div> 
         )
     }
 }

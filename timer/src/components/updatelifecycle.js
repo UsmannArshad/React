@@ -10,6 +10,7 @@ class UpdateComp extends Component{
     }
     componentDidMount()
     {
+        console.log("Component did mount")
         this.timerId=setInterval(()=>this.tick(),1000);   //using arrow function while calling
     }
     componentWillUnmount()
@@ -21,13 +22,18 @@ class UpdateComp extends Component{
         console.log("getDerivedStateFromProps")
         return null;
     }
+    componentDidUpdate()
+    {
+        console.log("Component did update")
+        this.timerId=setInterval(()=>this.tick(),1000);   //using arrow function while calling 
+    }
     shouldComponentUpdate()
     {
+        console.log("Should Componen Update")
         return this.state.check
     }
     tick()
     {
-        console.log("gg")
         this.setState((state)=>({
             time:new Date()
         }))
@@ -40,6 +46,7 @@ class UpdateComp extends Component{
     }
     render()
     {
+        console.log("Render")
         return(
         <div className="update_div">
         <h1>Updating LifeCycle</h1>

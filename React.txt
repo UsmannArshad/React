@@ -297,7 +297,7 @@ then it will give that time is undefineds
 =>Updating LifeCycle:
 An update can be caused by changes to props or state
 A component can'nt change its own props but can change the props of its children
-1)getDerivedStateFromProps()
+1) static getDerivedStateFromProps()
 2)shouldComponentUpdate()
 3)render()
 4)getSnapshotBeforeUpdate()
@@ -305,3 +305,10 @@ A component can'nt change its own props but can change the props of its children
 1)shouldComponentUpdate=>It returns boolean.It will be called when we want to update something.
 It will be called bw getDerivedStateFromProps and render.If false then it will not call Render.Otherwise
 it will call render.
+shouldComponentUpdate(nextProps,nextState) =>nextstate tell us the state we changed during setState
+    if(nextState.name=='Ron')              =>remember state is not updated yet it will updated when shouldComponentUpdate retun true                                           =>
+    {
+        return false
+    }
+    return true
+}
