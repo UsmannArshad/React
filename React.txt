@@ -312,3 +312,8 @@ shouldComponentUpdate(nextProps,nextState) =>nextstate tell us the state we chan
     }
     return true
 }
+All other read from Docs they r not important
+
+=>Hooks:
+We cant access state and other react feature like lifecycles in functions.So hooks let u use state and other
+react features without writing a class
