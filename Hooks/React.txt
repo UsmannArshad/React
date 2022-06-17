@@ -317,3 +317,23 @@ All other read from Docs they r not important
 =>Hooks:
 We cant access state and other react feature like lifecycles in functions.So hooks let u use state and other
 react features without writing a class
+
+A hook is a function provided by react that lets u hook into react features from yout functional component.
+
+1)UseState:
+const [name,setName]=useState('Usman')
+useState("some Initial value give us an array having value at first index and function at 2nd index")
+What if we have more than one values to deal with as in classes.
+1)You can use multilple use States like:
+const [name,setName]=useState('Usman')
+const [surname,SetSurname]=useState('Arshad')
+but that can be handy u can do this way too:
+const [state,setState]=useState({
+    name:'Usman',
+    surname:'Arshad'
+})
+Watch Coding on who to deal with it:
+
+Problem:If we change only name in setState,surname will not be copied in this state,now we'll only
+have name in our state.
+How to deal it?
