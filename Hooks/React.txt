@@ -321,6 +321,7 @@ react features without writing a class
 A hook is a function provided by react that lets u hook into react features from yout functional component.
 
 1)UseState:
+
 const [name,setName]=useState('Usman')
 useState("some Initial value give us an array having value at first index and function at 2nd index")
 What if we have more than one values to deal with as in classes.
@@ -339,3 +340,16 @@ have name in our state. i.e UseState does not automatically merge updated state
 How to deal it?
 1)use ...state it will copy the current state here then after this change(overwrite) the value u want.
 2)use useReducer(will study later)
+
+2)UseEffect:
+The Effect Hook lets you perform side effects in function components.If you’re familiar with React class lifecycle methods, you can think of 
+useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we’ll refer to it as our “effect”), and call it later after performing the DOM updates
+By default, it runs both after the first render and after every update.
+But we can customize it.
+useEffect(()=>{func},[array])
+=>Pass dependencies in this array
+1)No dependancy Passed:
+useEffect({func}) then it will be called at first render then at every update of any state(useState)
+2)An empty array:
+useEffect({func},[]) then it will be called at only first render.
