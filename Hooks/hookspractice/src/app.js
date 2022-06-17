@@ -1,4 +1,4 @@
-import REACT,{useState} from 'react'
+import React,{useState} from 'react'
 const App=({initialcount})=>{
     const [count,setCount]=useState(initialcount)
     const [state,setState]=useState({
