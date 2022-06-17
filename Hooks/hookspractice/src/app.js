@@ -16,8 +16,11 @@ const App=({initialcount})=>{
     }
     const ChangeData1=()=>{
         setState({
-            name:'Abeer',     //we can see if we change only name,surname didnt copied as it was done in class component 
+        
+            ...state,
+            name:'Umer'     //we can see if we change only name,surname didnt copied as it was done in class component to avoid this we ll use ...
         })
+    
     }
     return(
         <>

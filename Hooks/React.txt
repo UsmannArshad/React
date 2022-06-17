@@ -335,5 +335,7 @@ const [state,setState]=useState({
 Watch Coding on who to deal with it:
 
 Problem:If we change only name in setState,surname will not be copied in this state,now we'll only
-have name in our state.
+have name in our state. i.e UseState does not automatically merge updated state
 How to deal it?
+1)use ...state it will copy the current state here then after this change(overwrite) the value u want.
+2)use useReducer(will study later)
