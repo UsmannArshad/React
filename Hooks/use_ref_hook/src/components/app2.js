@@ -4,7 +4,9 @@ const [inputValue, setInputValue] = useState("");
 const previousInputValue = useRef("");
 
 useEffect(() => {
+    console.log({inputValue})
     previousInputValue.current = inputValue;
+    console.log(previousInputValue)
 }, [inputValue]);
 
 return (
