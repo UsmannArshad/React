@@ -353,3 +353,12 @@ useEffect(()=>{func},[array])
 useEffect({func}) then it will be called at first render then at every update of any state(useState)
 2)An empty array:
 useEffect({func},[]) then it will be called at only first render.
+3)State and props:
+useEffect({func},[state,props])=>this function will be called at time of initial rendering and whenever
+the state or props passed in array is updated
+Some effects require cleanup to reduce memory leaks.
+
+Timeouts, subscriptions, event listeners, and other effects that are no longer needed should be disposed.
+
+We do this by including a return function at the end of the useEffect Hook.
+Return will act as a unmout in class when component will unmounted return will be called.
