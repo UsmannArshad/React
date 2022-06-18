@@ -362,3 +362,23 @@ Timeouts, subscriptions, event listeners, and other effects that are no longer n
 
 We do this by including a return function at the end of the useEffect Hook.
 Return will act as a unmout in class when component will unmounted return will be called.
+
+=>Use Callback:
+
+The React useCallback Hook returns a memoized callback function.Think of memoization as caching a value so that it does not need to be recalculated.
+This allows us to isolate resource intensive functions so that they will not automatically run on every render.
+The useCallback Hook only runs when one of its dependencies update.
+
+useCallback(func,dependencies)
+
+Problem:How to avoid re-rendering component until its props changed?
+Solution:For values use memo and for functions use callbacks
+As in code if we r not using memo and callback then anystate updated after initial render will lead to 
+all the 5 components to re-render
+now for avoiding values to re-render we ll use:
+export default memo(Title) now it will not re-render until its props changed
+
+After using memo we can see when we increment count or age both the buttons i.e functions also re-rendered
+Now we ll use callback
+incrementcount=usecallback(()=>{u=>u+1},[])
+but we still have to use export default memo(Countbtn)
