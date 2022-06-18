@@ -17,6 +17,7 @@ class UseRefClass extends Component{
             <h1>Form:</h1>
             <input ref={this.textInput}/>
             <button onClick={(e)=>this.triggerhandler(e)}>Trigger</button>
+            <hr></hr>
             </>
         )
     }
