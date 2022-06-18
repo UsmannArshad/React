@@ -382,3 +382,16 @@ After using memo we can see when we increment count or age both the buttons i.e 
 Now we ll use callback
 incrementcount=usecallback(()=>{u=>u+1},[])
 but we still have to use export default memo(Countbtn)
+
+=>UseRef(Hook) or createRef(in class)
+
+1)The useRef Hook allows you to persist values between renders.
+
+2)It can be used to store a mutable value that does not cause a re-render when updated.
+
+3)It can be used to access a DOM element directly.
+In general, we want to let React handle all DOM manipulation.
+But there are some instances where useRef can be used without causing issues.
+In React, we can add a ref attribute to an element to access it directly in the DOM.
+If you pass a ref object to React with <div ref={myRef} />, React will set its .current property to the corresponding DOM node whenever that node changes.
+See App.js for 
