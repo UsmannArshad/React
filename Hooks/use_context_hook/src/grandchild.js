@@ -1,6 +1,8 @@
-import React from "react";
-const GrandChild=(props)=>{
-    console.log(props)
+import React,{useContext} from "react";
+import { myContext } from "./context/context";
+const GrandChild=()=>{
+    const context=useContext(myContext)        
+    console.log({context})
     return(
         <>
         <h2>Grand Child</h2>

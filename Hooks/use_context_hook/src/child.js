@@ -1,9 +1,9 @@
 import React from 'react'
 import GrandChild from './grandchild'
-const Child=(props)=>{
+const Child=()=>{
 return(
     <>
-    <GrandChild {...props}/>
+    <GrandChild/>
     </>
 )
 } 

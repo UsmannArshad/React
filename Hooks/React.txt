@@ -409,6 +409,11 @@ To do this without Context, we will need to pass the state as "props" through ea
 AS In code we want something in grandchild,we have to send props from parents to child then grandchild,
 Imagine it in a big react app it will become unmanageable.
 Solution:
-Use createContext
+Use createContext:
+1)As in index.js we want to send data from component1 to component5.We will create a context using
+createContext then we need provider we will define provider in parent(component1) give it a value and then
+the first children of the nested component.Now we can access it in component5 using useContext(contextname)
+2)We will create new folder named context make a new js fie now we can include it wherever we want.
+this.props.children will be the props passed to the provider in any component.See arent,children and grandchildren for more
 
 
