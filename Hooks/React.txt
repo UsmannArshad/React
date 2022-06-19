@@ -419,3 +419,7 @@ this.props.children will be the props passed to the provider in any component.Se
 We can even send functions in context as u can see in code.
 Question:How can we access context in class?
 Answer:To illustrate that i ll make child.js component class instead of hook in next commit.
+1)static contextType=Mycontext
+now we can access Mycontext by writing this.context
+but we can use only one context because we have only onw contextTye variable and this.context 
+2)How we can import/use multiple context in class use context.consumer as in code
