@@ -6,6 +6,11 @@ const GrandChild=()=>{
     return(
         <>
         <h2>Grand Child</h2>
+        {context.active ? context.users.map((item)=>(
+            <div key={item.id}>{item.name}</div>
+        )):null} 
+        <hr></hr>
+        <button onClick={context.togglehandler}>Toggle</button>
         </>
     )
 }

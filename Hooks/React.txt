@@ -416,4 +416,6 @@ the first children of the nested component.Now we can access it in component5 us
 2)We will create new folder named context make a new js fie now we can include it wherever we want.
 this.props.children will be the props passed to the provider in any component.See arent,children and grandchildren for more
 
-
+We can even send functions in context as u can see in code.
+Question:How can we access context in class?
+Answer:To illustrate that i ll make child.js component class instead of hook in next commit.
