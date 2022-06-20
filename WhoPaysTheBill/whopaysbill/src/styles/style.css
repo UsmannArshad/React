@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body{
+    margin:0px;
+    padding:0px;
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+h1{
+    font-family: 'Pacifico';
+    color:blue;
+    text-decoration: underline;
+    text-decoration-color:black;
+}

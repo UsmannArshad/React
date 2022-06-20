@@ -6,10 +6,14 @@ const App=()=>{
   let context=useContext(MyContext)
   return (
     <div className="App">
+      <div className='flex-item'>
       <h1>
         Who Pays the bill?
       </h1>
-    {context.state.stage===1 ? <Stage1/>:<Stage2/>}
+      </div>
+      <div className='flex-item'>
+      {context.state.stage===1 ? <Stage1/>:<Stage2/>}
+      </div>
     </div>
   );
 }
