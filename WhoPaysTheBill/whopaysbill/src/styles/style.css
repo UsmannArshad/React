@@ -22,4 +22,15 @@ h1{
 .addbtn{
     width:100px;
     margin-left: 30%;
+    background-color:blue;
+    
+}
+.nextbtn{
+    background-color: blue;
+    width:120px;
+    position:absolute;
+    top:90%;
+    left: 85%;
+    height:50px;
+    font-family: 'Pacifico';
 }

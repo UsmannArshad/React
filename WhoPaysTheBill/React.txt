@@ -423,3 +423,5 @@ Answer:To illustrate that i ll make child.js component class instead of hook in 
 now we can access Mycontext by writing this.context
 but we can use only one context because we have only onw contextTye variable and this.context 
 2)How we can import/use multiple context in class use context.consumer as in code
+
+React toastify:https://fkhadra.github.io/react-toastify/installation/

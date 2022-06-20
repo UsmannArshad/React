@@ -12,10 +12,7 @@ const Stage1=()=>{
         if(check===true)
         {
             context.AddPlayer(text.current.value)
-        }
-        else
-        {
-            console.log("nikal")
+            text.current.value=''
         }
     }
     const ValidInput=(val)=>{
@@ -52,6 +49,7 @@ const Stage1=()=>{
             <li key={i} className="list-group-item d-flex justify-content-between align-aitem-center list-group-item-action">{item} <span className="badge bg-danger" onClick={context.RemovePlayer}>x</span></li>))}
                 </ul>
             </div>
+            <Button className='nextbtn mt-3' onClick={context.NextBtnHandler}>NEXT</Button>
             </>
             :null
         }
