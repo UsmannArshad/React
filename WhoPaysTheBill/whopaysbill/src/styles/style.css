@@ -16,3 +16,10 @@ h1{
     text-decoration: underline;
     text-decoration-color:black;
 }
+.input_text{
+    width: 300px;
+}
+.addbtn{
+    width:100px;
+    margin-left: 30%;
+}
