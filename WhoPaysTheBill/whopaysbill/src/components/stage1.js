@@ -37,7 +37,7 @@ const Stage1=()=>{
             <Form.Group>
                 <Form.Control type="text" placeholder='Add Player Name' name='player' ref={text} className='input_text mt-2'/>
             </Form.Group>
-            <Button variant='primary' type='submit' className='addbtn mt-3'>Add</Button>
+            <Button variant='primary' type='submit' className='addbtn mt-3'>ADD</Button>
         </Form>
         {
             context.state.players.length>0 ?
