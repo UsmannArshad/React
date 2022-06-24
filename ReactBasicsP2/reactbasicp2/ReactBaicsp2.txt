@@ -14,4 +14,5 @@ A higher-order component (HOC) is an advanced technique in React for reusing com
 They are a pattern that emerges from React’s compositional nature.
 We can use HOC in styling,markups authentiaction etc
 
-We can give style of HOC to its children as in profile and profile layout in code.  
+We can give style of HOC to its children as in profile and profile layout in code.
+We can block rendering of children if some condition not met like authorization etc as in code   
