@@ -8,3 +8,10 @@ Now, ReactJS has provided us a Pure Component. If we extend a class with Pure Co
 In simple words, If the previous value of state or props and the new value of state or props is the same, the component will not re-render itself. Since Pure Components restricts the re-rendering when there is no use of re-rendering of the component.
 
 Functional component did not re-render if state is not changed.
+
+=>HOC:
+A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se.
+They are a pattern that emerges from React’s compositional nature.
+We can use HOC in styling,markups authentiaction etc
+
+We can give style of HOC to its children as in profile and profile layout in code.  

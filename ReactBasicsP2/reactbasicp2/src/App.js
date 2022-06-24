@@ -4,6 +4,7 @@ import Home from "./components/home";
 import Header from "./components/header";
 import PureComp from "./components/purecomp";
 import PureCompF from "./components/purecompF";
+import Profile from "./components/profile";
 const App=()=>{
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ const App=()=>{
           <Route path="/" element={<Home/>}/>
           <Route path="/purecomp" element={<PureComp/>}></Route>
           <Route path="/purecompF" element={<PureCompF/>}></Route>
+          <Route path="/profile" element={<Profile/>}></Route>
           </Routes>
         </div>
     </BrowserRouter>

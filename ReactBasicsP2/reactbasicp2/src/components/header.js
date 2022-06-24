@@ -8,7 +8,8 @@ return (
     <nav className="my-2 my-md-0 mr-md-3">
         <NavLink className="p-2" to="/">Home</NavLink>-
         <NavLink to="/purecomp">PureComp</NavLink>-
-        <NavLink to="/purecompF">PureCompF</NavLink>
+        <NavLink to="/purecompF">PureCompF</NavLink>-
+        <NavLink to="/profile">Profile</NavLink>
     </nav>
     </div>
 </header>
