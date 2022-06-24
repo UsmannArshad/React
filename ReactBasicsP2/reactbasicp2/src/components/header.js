@@ -9,7 +9,8 @@ return (
         <NavLink className="p-2" to="/">Home</NavLink>-
         <NavLink to="/purecomp">PureComp</NavLink>-
         <NavLink to="/purecompF">PureCompF</NavLink>-
-        <NavLink to="/profile">Profile</NavLink>
+        <NavLink to="/profile">Profile</NavLink>-
+        <NavLink to="/user">User</NavLink>
     </nav>
     </div>
 </header>
