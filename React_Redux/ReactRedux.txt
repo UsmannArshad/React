@@ -1,0 +1,26 @@
+React Redux is the official React UI bindings layer for Redux. It lets your React components read data from a Redux store, and dispatch actions to the store to update state.
+React Redux is the official Redux UI binding library for React. If you are using Redux and React together, you should also use React Redux to bind these two libraries
+When your javascript application grows bigger,it becomes difficult for the user to manage its state.
+Redux solve this problem by managing application's state with a single global object called store.
+Makes testing very easy,consistency through application.
+npm install redux(state management library) react-redux(binding library)
+
+=>Provider:(Bridge bw redux and react)
+React Redux includes a <Provider /> component, which makes the Redux store available to the rest of your app
+
+Client(req)->server(data)->redux(provide)->component(render)->client
+But problem is when we made req to server this req take a little bit of time on the other hand redux have no 
+idea that it has to wait until data comes back from server.It will pass the info to the component but it is
+empty.
+Solution:Use middleware=>knows it has to wait until data comes
+Client(req)->server(data)->redux(provide)->middleware->component(render)->client
+
+1)Store holds all the globalized state  for our app
+2)Action(plain object) tells what to do(do somethng and return something with type and payload.This object will go to all reducer and search 4 the reducer that we manually create for this action it ill update the state and then re-render )
+3)Reducer(function) modifies our store
+4)dispatch:execute action
+
+=>Redux DevTools:
+add the extension of redux DevTools
+then use window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+npm install --save redux-promise=>this is middleware
