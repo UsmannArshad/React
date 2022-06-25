@@ -1,7 +1,16 @@
-import React from 'react'
 const MovieReducer = (state=[],action) => {
-    return(
-        null
-    )
+    if(action.type==="AddMovie")
+    {
+        return [...state,action.payload]
+    }
+    else if(action.type==="SubtractAmount")
+    {
+        return state.splice(action.payload,1)
+    }
+    else
+    {
+        return state
+    }
 }
+
 export default MovieReducer
