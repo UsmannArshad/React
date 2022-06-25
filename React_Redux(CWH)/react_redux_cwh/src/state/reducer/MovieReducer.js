@@ -1,11 +1,12 @@
-const MovieReducer = (state=[],action) => {
+const MovieReducer = (state=[{id:1,name:"Bahubali",price:200}],action) => {
     if(action.type==="AddMovie")
     {
         return [...state,action.payload]
     }
-    else if(action.type==="SubtractAmount")
+    else if(action.type==="DeleteMovie")
     {
-        return state.splice(action.payload,1)
+        state.splice(action.payload,1)
+        return [...state]
     }
     else
     {

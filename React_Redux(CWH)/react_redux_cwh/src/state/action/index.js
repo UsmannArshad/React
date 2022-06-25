@@ -18,7 +18,7 @@ export const AddMovie=(id,moviename,price)=>{
 }
 export const DeleteMovie=(id)=>{
     return{
-        type:'AddMovie',
+        type:'DeleteMovie',
         payload:id
     }
 }
