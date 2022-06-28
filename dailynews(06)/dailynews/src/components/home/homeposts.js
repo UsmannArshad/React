@@ -7,7 +7,7 @@ const Homeposts = () => {
     const dispatch=useDispatch()
     console.log(posts)
     useEffect(()=>{
-        dispatch(getPost())
+        dispatch(getPost(1,"desc",6))
     },[dispatch])
   return (
     <div>Homeposts</div>

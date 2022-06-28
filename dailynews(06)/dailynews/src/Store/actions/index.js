@@ -1,8 +1,8 @@
 import * as api from "../../api";
 import { GetPosts } from "../types";
-export const getPost=()=>{
+export const getPost=(page,order,limit)=>{
     return({
     type:GetPosts,
-    payload:api.GetPost()
+    payload:api.GetPost(page,order,limit)
 })
 }
