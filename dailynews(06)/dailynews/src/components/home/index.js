@@ -1,8 +1,9 @@
 import React from 'react'
+import Homeposts from './homeposts'
 const Home =()=>{
     return(
         <>
-        Home
+        <Homeposts/>
         </>
     )
 }
