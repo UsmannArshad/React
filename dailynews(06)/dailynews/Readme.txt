@@ -32,3 +32,7 @@ Q)What we need?
   We have to send previous posts as it will e attached to next state and page also required 
   previous state as 2 come after 1.
   But now we have to apply validation that if there are no more posts then button become invisible
+  react-masonry and reat-moment are two important libraries
+  https://www.npmjs.com/package/react-masonry-css
+  npm install react-masonry-css
+  import Masonry from 'react-masonry-css'

@@ -1,7 +1,10 @@
 import React,{useEffect} from 'react'
 import {useSelector,useDispatch} from 'react-redux'
 import { getPost } from '../../Store/actions'
-import {Spinner,Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
+import Masonry from 'react-masonry-css'
+import Moment from 'react-moment'
+import {LinkContainer} from 'react-router-bootstrap'
 
 const Homeposts = () => {
     const posts=useSelector(state=>state.Post)
@@ -15,8 +18,34 @@ const Homeposts = () => {
     }
   return(
     <>
-    <h1>Homeposts</h1>
-    <Button variant="outline-dark" onClick={GetmorePost}>Show More</Button>
+    <Masonry
+              breakpointCols={{default:3,800:2,400:1}}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
+                {posts.articles ? 
+                posts.articles.map((item)=>(
+                  <div key={item.id}>
+                    <img src={item.image} style={{width:'100%',height:'150px'}}/>
+                    <div className='author'>
+                      <span>{item.author}</span>
+                      <Moment format="DD MMMM">
+                        {item.createdAt}
+                      </Moment>
+                    </div>
+                    <div className='content'>
+                      <div className='title' style={{height:'100px'}}>{item.title}</div>
+                      <div className='excerpt' style={{height:'130px'}}>{item.excerpt}</div>
+                      <LinkContainer
+                    to={`/artivle/${item.id}`}
+                    className="mt-2">
+                    <Button variant='success'>Read more</Button>
+                    </LinkContainer>
+                    </div>
+                  </div>
+                )):null}
+            </Masonry>
+    {posts.isended ? null:<Button variant="outline-dark" onClick={GetmorePost}>Show More</Button>}
     </>
   )
 }

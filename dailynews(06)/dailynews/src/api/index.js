@@ -5,7 +5,8 @@ try{
     const response=await axios.get(`${Url_Serv}/posts/?_page=${page}&_limit=${limit}&_order=${order}&_sort=id`)
     return {
         articles:posts.articles ? [...posts.articles,...response.data]:response.data,
-        page:page
+        page:page,
+        isended:response.data.length===0 ? true:false 
     }
 }
 catch(error){
