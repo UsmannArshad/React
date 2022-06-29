@@ -13,8 +13,31 @@ catch(error){
 throw error; 
 }
 }
-export const AddUsers=(prevlist,user)=>{
-    return{
-        users:prevlist ? [...prevlist,user]:[user]
+export const AddUser=async(user)=>{
+    try{
+        const request=await axios.get(`${Url_Serv}/newsletter/?email=${user}`)
+        if(request.data.length===0)
+        {
+            //Add User
+            const response=await axios({
+                method:'POST',
+                url:`${Url_Serv}/newsletter`,
+                data:{email:user}
+            })
+            return{
+                newsletter:'added',
+                email:response.data
+            }
+        }
+        else
+        {
+            return{
+                newsletter:'rejected'
+            }
+            //Already exist
+        }
     }
-}
+    catch(error){
+    throw error; 
+    }
+    }

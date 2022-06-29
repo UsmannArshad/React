@@ -6,9 +6,9 @@ export const getPost=(posts,page,order,limit)=>{
     payload:api.GetPost(posts,page,order,limit)
 })
 }
-export const adduser=(prevlist,user)=>{
+export const adduser=(user)=>{
     return({
         type:AddUsers,
-        payload:api.AddUsers(prevlist,user)
+        payload:api.AddUser(user)
     })
 }

@@ -202,9 +202,14 @@
     }
   ],
   "newsletter": [
-    
+    {
+      "id": 1,
+      "email": "usman@email.com"
+    },
+    {
+      "email": "usman",
+      "id": 2
+    }
   ],
-  "contact": [
-    
-  ]
+  "contact": []
 }

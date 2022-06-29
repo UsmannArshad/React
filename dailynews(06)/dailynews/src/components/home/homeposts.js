@@ -25,8 +25,8 @@ const Homeposts = () => {
             >
                 {posts.articles ? 
                 posts.articles.map((item)=>(
-                  <div key={item.id}>
-                    <img src={item.image} style={{width:'100%',height:'150px'}}/>
+                  <div key={item.id} style={{minHeight:'500px'}}>
+                    <img src={item.image} style={{width:'100%',height:'200px'}}/>
                     <div className='author'>
                       <span>{item.author}</span>
                       <Moment format="DD MMMM">
@@ -34,8 +34,8 @@ const Homeposts = () => {
                       </Moment>
                     </div>
                     <div className='content'>
-                      <div className='title' style={{height:'100px'}}>{item.title}</div>
-                      <div className='excerpt' style={{height:'130px'}}>{item.excerpt}</div>
+                      <div className='title'>{item.title}</div>
+                      <div className='excerpt'>{item.excerpt}</div>
                       <LinkContainer
                     to={`/artivle/${item.id}`}
                     className="mt-2">

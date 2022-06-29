@@ -9,7 +9,7 @@ const Newsletter = () => {
     const submithandler=(e)=>{
         e.preventDefault();
         const value=InputText.current.value
-        dispatch(adduser(Users.users,value))
+        dispatch(adduser(value))
     }
 return (
     <div className="newsletter_container">
@@ -22,7 +22,7 @@ return (
                 placeholder="example name@email.com"
                 ref={InputText}/>
             </Form.Group>
-            <Button variant="outline-primary" type="submit">
+            <Button variant="primary" type="submit" className="mt-2">
                 Add me to the list
             </Button>
         </Form>

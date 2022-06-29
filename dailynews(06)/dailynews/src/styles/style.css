@@ -93,7 +93,9 @@ nav {
     text-align: center;
     font-family: 'Yellowtail', cursive;
 }
-
+.newsletter_container Button{
+  margin-left:35%;
+}
 .newsletter_container .form {
     width: 500px;
     margin: 0 auto;
