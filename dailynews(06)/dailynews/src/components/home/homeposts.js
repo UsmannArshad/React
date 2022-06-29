@@ -25,7 +25,7 @@ const Homeposts = () => {
             >
                 {posts.articles ? 
                 posts.articles.map((item)=>(
-                  <div key={item.id} style={{minHeight:'500px'}}>
+                  <div key={item.id}>
                     <img src={item.image} style={{width:'100%',height:'200px'}}/>
                     <div className='author'>
                       <span>{item.author}</span>
