@@ -3,6 +3,7 @@ import React from 'react'
 import Home from './components/home'
 import MainLayout from './hoc/mainlayout'
 import Header from './components/header'
+import Contact from './components/contact'
 const Routess=()=>{
     return(
         <BrowserRouter>
@@ -10,6 +11,7 @@ const Routess=()=>{
         <MainLayout>
         <Routes>
             <Route path="/" element={<Home/>}/>
+            <Route path="/contact" element={<Contact/>}/>
         </Routes>
         </MainLayout>
         </BrowserRouter>

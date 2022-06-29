@@ -32,7 +32,8 @@ export const AddUser=async(user)=>{
         else
         {
             return{
-                newsletter:'rejected'
+                newsletter:'rejected',
+                email:''
             }
             //Already exist
         }

@@ -10,7 +10,7 @@ const Homeposts = () => {
     const posts=useSelector(state=>state.Post)
     const dispatch=useDispatch()
     useEffect(()=>{
-        dispatch(getPost(posts,1,"desc",6))
+        dispatch(getPost({},1,"desc",6))
     },[dispatch])
     const GetmorePost=()=>
     {

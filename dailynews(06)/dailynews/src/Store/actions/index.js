@@ -1,5 +1,5 @@
 import * as api from "../../api";
-import { GetPosts,AddUsers } from "../types";
+import { GetPosts,AddUsers,ClearUsers} from "../types";
 export const getPost=(posts,page,order,limit)=>{
     return({
     type:GetPosts,
@@ -10,5 +10,11 @@ export const adduser=(user)=>{
     return({
         type:AddUsers,
         payload:api.AddUser(user)
+    })
+}
+export const clearuser=()=>{
+    return({
+        type:ClearUsers,
+        payload:{newsletter:false,email:{}}
     })
 }
