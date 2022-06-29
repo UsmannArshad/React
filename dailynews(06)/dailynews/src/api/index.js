@@ -13,3 +13,8 @@ catch(error){
 throw error; 
 }
 }
+export const AddUsers=(prevlist,user)=>{
+    return{
+        users:prevlist ? [...prevlist,user]:[user]
+    }
+}
