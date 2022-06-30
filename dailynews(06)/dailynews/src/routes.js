@@ -14,6 +14,7 @@ const Routess=()=>{
             <Route path="/article/:id" element={<PostDetail/>}></Route>
             <Route path="/" element={<Home/>}/>
             <Route path="/contact" element={<Contact/>}/>
+            <Route path="*" element={<Error/>}/>
         </Routes>
         </MainLayout>
         </BrowserRouter>
