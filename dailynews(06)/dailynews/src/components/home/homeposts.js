@@ -39,7 +39,7 @@ const Homeposts = () => {
                       <LinkContainer
                     to={`/article/${item.id}`}
                     className="mt-2">
-                    <Button variant='success' onClick={()=>dispatch(getpostbyid)}>Read more</Button>
+                    <Button variant='success'>Read more</Button>
                     </LinkContainer>
                     </div>
                   </div>

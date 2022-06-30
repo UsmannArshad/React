@@ -44,7 +44,7 @@ export const AddUser=async(user)=>{
     }
     export const GetPostDetail=async(id)=>{
         try{
-            const response=await axios.get(`${Url_Serv}/articles/${id}`)
+            const response=await axios.get(`${Url_Serv}/posts/${id}`)
             return {
                 postbyid:response.data
             }

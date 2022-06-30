@@ -11,9 +11,9 @@ const Routess=()=>{
         <Header/>
         <MainLayout>
         <Routes>
+            <Route path="/article/:id" element={<PostDetail/>}></Route>
             <Route path="/" element={<Home/>}/>
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/article/:id" element={<PostDetail/>}></Route>
         </Routes>
         </MainLayout>
         </BrowserRouter>
