@@ -42,3 +42,14 @@ export const AddUser=async(user)=>{
     throw error; 
     }
     }
+    export const GetPostDetail=async(id)=>{
+        try{
+            const response=await axios.get(`${Url_Serv}/articles/${id}`)
+            return {
+                postbyid:response.data
+            }
+        }
+        catch(error){
+        throw error; 
+        }
+        }

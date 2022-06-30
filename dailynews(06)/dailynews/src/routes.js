@@ -4,6 +4,7 @@ import Home from './components/home'
 import MainLayout from './hoc/mainlayout'
 import Header from './components/header'
 import Contact from './components/contact'
+import PostDetail from './components/home/postdetail'
 const Routess=()=>{
     return(
         <BrowserRouter>
@@ -12,6 +13,7 @@ const Routess=()=>{
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/contact" element={<Contact/>}/>
+            <Route path="/article/:id" element={<PostDetail/>}></Route>
         </Routes>
         </MainLayout>
         </BrowserRouter>

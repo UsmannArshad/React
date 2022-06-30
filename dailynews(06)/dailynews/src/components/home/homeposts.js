@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import {useSelector,useDispatch} from 'react-redux'
-import { getPost } from '../../Store/actions'
+import { getPost,getpostbyid } from '../../Store/actions'
 import {Button} from 'react-bootstrap'
 import Masonry from 'react-masonry-css'
 import Moment from 'react-moment'
@@ -19,7 +19,7 @@ const Homeposts = () => {
   return(
     <>
     <Masonry
-              breakpointCols={{default:3,800:2,400:1}}
+              breakpointCols={{default:3,800:2,500:1}}
               className="my-masonry-grid"
               columnClassName="my-masonry-grid_column"
             >
@@ -37,9 +37,9 @@ const Homeposts = () => {
                       <div className='title'>{item.title}</div>
                       <div className='excerpt'>{item.excerpt}</div>
                       <LinkContainer
-                    to={`/artivle/${item.id}`}
+                    to={`/article/${item.id}`}
                     className="mt-2">
-                    <Button variant='success'>Read more</Button>
+                    <Button variant='success' onClick={()=>dispatch(getpostbyid)}>Read more</Button>
                     </LinkContainer>
                     </div>
                   </div>

@@ -14,7 +14,6 @@ const Newsletter = () => {
     }
     useEffect(()=>{
         InputText.current.value=""
-        console.log(Users)
         if(Users.newsletter)
         {
         if(Users.newsletter==='added')
@@ -46,7 +45,9 @@ const Newsletter = () => {
     }
     },[Users])
     useEffect(()=>{
-        dispatch(clearuser())
+        return()=>{
+            dispatch(clearuser())
+        }
     },[dispatch])
 return (
     <>

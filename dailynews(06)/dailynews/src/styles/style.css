@@ -33,19 +33,20 @@ nav {
 }
 .my-masonry-grid_column {
   padding-left: 30px; /* gutter size */
-  background-clip: padding-box;
+  /* background-clip: padding-box; */
 }
  
 /* Style your items */
 .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
-  background: grey;
+  background: white;
   margin-bottom: 30px;
+  min-height:550px;
+  border: 1px solid black;
 }
 
 .my-masonry-grid .content { 
     padding:15px;
     background: white;
-    border: 1px solid #dbdbdb;
 }
 .my-masonry-grid .content .title { 
     border-bottom: 1px solid #ececec;
