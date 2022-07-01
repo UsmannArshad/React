@@ -40,7 +40,12 @@ return (
     <div className="row">
         <div className="col-md-6 mb-3">
         <label htmlFor="firstname">First name</label>
-        <input type="text" value={formik.values.firstname} onBlur={formik.handleBlur} onChange={formik.handleChange} className="form-control" id="firstname" name="firstname"/>
+        <input
+        type="text"
+        {...formik.getFieldProps('firstname')}  //use it instead of writing value,onChange and onBlurr
+        className="form-control" 
+        id="firstname" 
+        name="firstname"/>
         {formik.errors.firstname&&formik.touched.firstname ? <div style={{background:'red'}}>{formik.errors.firstname}</div>:null}
         </div>
         <div className="col-md-6 mb-3">

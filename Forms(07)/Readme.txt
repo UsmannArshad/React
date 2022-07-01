@@ -68,3 +68,6 @@ include it in useFormik hook then update the HTML that if erorr is present then 
 
 useBlur have an object touched.It keep the record of field that we touched.Now it will not give error 
 on all of the fields.See code and documentation for more.
+
+Sometime its very time taking to write value:{formik.values.firstname}
+then onChange and onBlrr:{handleBlurr} we will simply write {...formik.getFieldProps('firstname)}
