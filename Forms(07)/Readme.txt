@@ -1,5 +1,7 @@
 Forms:
 
+https://formik.org/docs/tutorial
+
 1)Use Formik library
 nm install formik yup --save
 yup is for validation
@@ -57,3 +59,11 @@ const SignupForm = () => {
     </form>
   );
 };
+
+Validation with formik:
+make a custome function that will return an object
+validate each values u want to valdiate and update the object like erors.firstname='required'
+include it in useFormik hook then update the HTML that if erorr is present then show erorr otherwise null
+
+useBlur have an object touched.It keep the record of field that we touched.Now it will not give error 
+on all of the fields.See code and documentation for more.
