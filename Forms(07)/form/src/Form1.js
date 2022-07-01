@@ -1,3 +1,4 @@
+//Making form with Formik and easy validation(not using yup) 
 import {useFormik} from 'formik'
 import React from 'react'
 const validate=values=>{
@@ -41,6 +42,7 @@ const Form1=()=>{
   })
   return (
     <div className="container">
+      <h1>FORM 1</h1>
     <div className="col-md-12 mt-5">
     <form onSubmit={formik.handleSubmit}>
       <h4 className="mb-3">Personal information</h4>
