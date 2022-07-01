@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import {useSelector,useDispatch} from 'react-redux'
-import { getPost,getpostbyid } from '../../Store/actions'
+import { getPost} from '../../Store/actions'
 import {Button} from 'react-bootstrap'
 import Masonry from 'react-masonry-css'
 import Moment from 'react-moment'
@@ -10,7 +10,7 @@ const Homeposts = () => {
     const posts=useSelector(state=>state.Post)
     const dispatch=useDispatch()
     useEffect(()=>{
-        dispatch(getPost({},1,"desc",6))
+      dispatch(getPost({},1,"desc",6))
     },[dispatch])
     const GetmorePost=()=>
     {
@@ -45,7 +45,7 @@ const Homeposts = () => {
                   </div>
                 )):null}
             </Masonry>
-    {posts.isended ? null:<Button variant="outline-dark" onClick={GetmorePost}>Show More</Button>}
+    {posts.isended ? null:<Button variant="outline-dark" onClick={()=>GetmorePost()}>Show More</Button>}
     </>
   )
 }

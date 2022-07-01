@@ -13,10 +13,10 @@ const Newsletter = () => {
         dispatch(adduser(value))
     }
     useEffect(()=>{
-        InputText.current.value=""
         if(Users.newsletter)
         {
-        if(Users.newsletter==='added')
+        InputText.current.value=""
+        if(Users.newsletter==="added")
         {
             toast.success('🦄 Email Added', {
                 position: "bottom-right",
@@ -27,9 +27,9 @@ const Newsletter = () => {
                 draggable: true,
                 progress: undefined,
                 theme:"colored"
-                })
+                });
         }
-        else
+        if(Users.newsletter==="rejected")
         {
             toast.error('🦄 Email Already Added!', {
                 position: "bottom-right",
@@ -43,11 +43,11 @@ const Newsletter = () => {
                 })
         }
     }
-    },[Users])
+    },[Users]);
     useEffect(()=>{
         return()=>{
             dispatch(clearuser())
-        }
+    }
     },[dispatch])
 return (
     <>

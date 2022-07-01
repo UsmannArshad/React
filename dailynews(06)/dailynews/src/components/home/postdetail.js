@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import Newsletter from '../../utils/newsletter'
-import { getpostbyid } from '../../Store/actions'
+import { clearpost,getpostbyid } from '../../Store/actions'
 import Moment from 'react-moment'
 import { useParams } from 'react-router-dom'
 
@@ -10,10 +10,13 @@ const PostDetail = () => {
     const post=useSelector(state=>state.Post)
     const id =useParams()
     console.log(id)
+    useEffect(()=>{(
+    dispatch(getpostbyid(id.id)))
+    },[dispatch,id.id])
     useEffect(()=>{
-        dispatch(getpostbyid(id.id))
-    },[post])
-    useEffect(()=>{
+        return()=>{
+        dispatch(clearpost())
+    }
     },[dispatch])
     return(
         <>

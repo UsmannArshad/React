@@ -1,26 +1,22 @@
 import * as api from "../../api";
-import { GetPosts,AddUsers,ClearUsers,GetPostById} from "../types";
-export const getPost=(posts,page,order,limit)=>{
-    return({
+import { GetPosts,AddUsers,ClearUsers,GetPostById, ClearPost} from "../types";
+export const getPost=(posts,page,order,limit)=>({
     type:GetPosts,
     payload:api.GetPost(posts,page,order,limit)
 })
-}
-export const adduser=(user)=>{
-    return({
+export const adduser=(user)=>({
         type:AddUsers,
         payload:api.AddUser(user)
-    })
-}
-export const clearuser=()=>{
-    return({
+})
+export const clearuser=()=>({
         type:ClearUsers,
         payload:{newsletter:false,email:{}}
-    })
-}
-export const getpostbyid=(id)=>{
-    return({
+})
+export const getpostbyid=(id)=>({
         type:GetPostById,
         payload:api.GetPostDetail(id)
-    })
-}
+})
+export const clearpost=()=>({
+        type:ClearPost,
+        payload:{postbyid:{}}
+})
