@@ -53,3 +53,20 @@ export const AddUser=async(user)=>{
         throw error; 
         }
         }
+    export const SaveContact=async(values)=>{
+        try{
+            const response=await axios({
+                method:'POST',
+                url:`${Url_Serv}/contact`,
+                data:{email:values.email,password:values.password}
+            })
+            return{
+                username:values.email,
+                password:values.password
+            }
+        }
+        catch(error)
+        {
+            throw error;
+        }
+    }

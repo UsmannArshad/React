@@ -221,87 +221,18 @@
     {
       "email": "Ali",
       "id": 5
-    },
-    {
-      "email": "AliArshad",
-      "id": 6
-    },
-    {
-      "email": "Usman",
-      "id": 7
-    },
-    {
-      "email": "UsmanArshad1234",
-      "id": 8
-    },
-    {
-      "email": "UsmanArshadSSG",
-      "id": 9
-    },
-    {
-      "email": "UsmanArshadff",
-      "id": 10
-    },
-    {
-      "email": "AliArshadSSg",
-      "id": 11
-    },
-    {
-      "email": "usmanisi",
-      "id": 12
-    },
-    {
-      "email": "Aligg",
-      "id": 13
-    },
-    {
-      "email": "Umer",
-      "id": 14
-    },
-    {
-      "email": "Momin",
-      "id": 15
-    },
-    {
-      "email": "Ahmad",
-      "id": 16
-    },
-    {
-      "email": "Hadi",
-      "id": 17
-    },
-    {
-      "email": "Aleeha",
-      "id": 18
-    },
-    {
-      "email": "doggy",
-      "id": 19
-    },
-    {
-      "email": "Zayan",
-      "id": 20
-    },
-    {
-      "email": "gg",
-      "id": 21
-    },
-    {
-      "email": "gg1",
-      "id": 22
-    },
-    {
-      "email": "gg4",
-      "id": 23
-    },
-    {
-      "email": "gg5",
-      "id": 24
-    },
-    {
-      "email": "gg10",
-      "id": 25
     }
   ],
-  "contact": []
+  "contact": [
+    {
+      "email": "usmanarshadbhatti480@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "email": "UsmanArshadBhatti480@gmail.com",
+      "password": "1234",
+      "id": 2
+    }
+  ]
 }
