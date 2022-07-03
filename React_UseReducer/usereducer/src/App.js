@@ -1,21 +1,22 @@
 import React,{useReducer} from "react";
+import { Reducers } from "./utils/reducers";
 const App=()=>{
-  const [state,dispatch]=useReducer((state,action)=>{
-    switch(action)
-    {
-      case 1:
-        return state+1
-      case -1:
-        return state-1
-      default:
-        return state
+  const [state,dispatch]=useReducer(Reducers,{count:0,user:'USMAN'})
+  const ChangeNameHandler=()=>{
+    const newName=['Ali','Umer','Abeer']
+    console.log("gg")
+    return{
+      type:'changeuser',
+      payload:newName[Math.floor(Math.random()*newName.length)]
     }
-  },0)
+  }
   return (
     <div className="App">
-      <div>Current State:{state}</div>
-      <button onClick={()=>dispatch(1)}>Inc</button>
-      <button onClick={()=>dispatch(-1)}>Dec</button>
+      <div>Current Count:{state.count}</div>
+      <div>Current User:{state.user}</div>
+      <button onClick={()=>dispatch({type:'increment',payload:1})}>Inc</button>
+      <button onClick={()=>dispatch({type:'decrement',payload:-1})}>Dec</button>
+      <button onClick={()=>dispatch(ChangeNameHandler())}>Cange User</button>
     </div>
   );
 }
